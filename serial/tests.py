@@ -11,8 +11,10 @@ class NameSerialisationTest(APITestCase):
     client = APIClient()
     url = reverse('serial.full_name')
     data = {
+      "full_name" :{
       "first_name": "Sam", 
       "last_name":"McSammy",
+      },
       "start_date": timezone.now().strftime(time_format_out),
       "end_date": timezone.now().strftime(time_format_out)
     }
