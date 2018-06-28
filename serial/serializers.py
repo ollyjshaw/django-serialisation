@@ -8,7 +8,6 @@ class SerialSerializer(serializers.ModelSerializer):
   first_name = serializers.SerializerMethodField()
   last_name = serializers.SerializerMethodField()
   
-  date_range = DateTimeRangeField()
   date_range = DateTimeRangeField(write_only=True, required=False)
   start_date = serializers.SerializerMethodField()
   end_date = serializers.SerializerMethodField()
